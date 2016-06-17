@@ -1,0 +1,159 @@
+/* Background(s) */
+
+body {
+	background: #bcf;
+	background: linear-gradient(#bcf, #fff, #bcf);
+		background: -webkit-linear-gradient(#bcf, #fff, #bcf);
+		background: -o-linear-gradient(#bcf, #fff, #bcf);
+	background: -moz-linear-gradient(#bcf, #fff, #bcf);
+	padding-bottom: 100px;
+}
+
+.main-section {
+	padding-top: 70px;
+	min-height: 650px;
+	max-width: 900px;
+	margin: 0px auto 100px auto;
+}
+
+
+
+/* General Text Styling */
+
+h1 {
+	padding-bottom: 20px;	
+	font-family: Gill Sans, HelveticaNeue, Helvetica, sans-serif;
+	font-size: 48px;
+	color: #111;
+}
+
+p {
+	font-family: GillSans, HelveticaNeue, Helvetica, sans-serif;
+	font-size: 18px;
+	padding-bottom: 20px;
+	color: #111;
+}
+
+
+
+/* Links */
+
+a:hover, a:visited, a:link, a:active {
+	color: #111;
+	text-decoration: none;
+}
+
+.dotted-underline {
+	border-bottom: 1px dotted #999;
+}
+
+.dotted-underline:hover {
+	border-bottom: 1px solid #555;
+}
+
+
+
+/* Nav and Related Styling */
+
+.navbar {
+	opacity: 0.7;
+}
+
+.navbar ul {
+	float: right;
+}
+
+.navbar li {
+	text-align: right;
+	font-family: GillSans, sans-serif;
+	font-size: 18px;
+}
+
+.room-for-menu {
+	padding-top: 100px;
+}
+
+/* Header (which doesn't exist yet) */
+
+
+
+
+
+/* About Section */
+
+.about-text {
+	display: block;
+}
+
+.about-photo {
+	max-height: 250px;
+	margin: auto;
+	margin-bottom: 24px;
+	border-radius: 8%;
+}
+
+.about-section {
+	padding-top: 10%;
+}
+
+/* Portfolio Section */
+
+.thumbnail {
+	width: 270px;
+	height: 180px;
+	display: block;
+	margin: 10px auto 10px auto;
+}
+
+.thumbnail:hover {
+	opacity: 0.8;
+}
+
+.project-caption {
+	text-align: center;
+}
+
+.portfolio-section {
+	padding-top: 10%;
+}
+
+
+
+/* Contact Section */
+
+.fa, .fcc-block {
+	display: block;
+	text-align: center;
+	opacity: 1;
+	color: #111;
+	text-decoration: none;
+	margin-top: 36px;
+}
+
+.fcc-logo {
+	width: 48px;
+	height: 48px;
+	display: inline;
+	margin: 4px auto;
+	border-radius: 20%;
+}
+
+.fa-twitter-square {
+	color: #00aced;
+}
+
+.fa-linkedin-square {
+	color: #007bb6;
+}
+
+.icon-caption {
+	color: #333;
+	display: none;
+	text-align: center;
+	text-decoration: none;
+	margin-bottom: -20px;
+}
+
+.contact-section {
+	padding-top: 10%;
+}
