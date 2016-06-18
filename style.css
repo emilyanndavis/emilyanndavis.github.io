@@ -10,9 +10,8 @@ body {
 }
 
 .main-section {
-	padding-top: 70px;
 	min-height: 650px;
-	max-width: 900px;
+/*	max-width: 900px;     */
 	margin: 0px auto 100px auto;
 }
 
@@ -20,19 +19,23 @@ body {
 
 /* General Text Styling */
 
+h1, h3, p {
+	font-family: Gill Sans, HelveticaNeue, Helvetica, sans-serif;
+}
+
 h1 {
 	padding-bottom: 20px;	
-	font-family: Gill Sans, HelveticaNeue, Helvetica, sans-serif;
 	font-size: 48px;
 	color: #111;
 }
 
 p {
-	font-family: GillSans, HelveticaNeue, Helvetica, sans-serif;
 	font-size: 18px;
-	padding-bottom: 20px;
 	color: #111;
 }
+
+
+
 
 
 
@@ -93,30 +96,38 @@ a:hover, a:visited, a:link, a:active {
 }
 
 .about-section {
-	padding-top: 10%;
+	padding: 15% 15% 0 15%;
 }
 
 /* Portfolio Section */
-
-.thumbnail {
-	width: 270px;
-	height: 180px;
-	display: block;
-	margin: 10px auto 10px auto;
-}
 
 .thumbnail:hover {
 	opacity: 0.8;
 }
 
-.project-caption {
+.thumbnail .caption {
 	text-align: center;
 }
 
-.portfolio-section {
-	padding-top: 10%;
+.thumbnail img {
+	max-height: 260px;
 }
 
+.portfolio-section {
+	padding: 12% 5% 0 5%;
+}
+
+.portfolio-subheading {
+	margin-top: -20px;
+	padding-bottom: 20px;
+}
+
+
+/*
+.project-caption {
+	text-align: center;
+}
+*/
 
 
 /* Contact Section */
@@ -133,7 +144,7 @@ a:hover, a:visited, a:link, a:active {
 .fcc-logo {
 	width: 48px;
 	height: 48px;
-	display: inline;
+	display: inline-block;
 	margin: 4px auto;
 	border-radius: 20%;
 }
@@ -155,5 +166,11 @@ a:hover, a:visited, a:link, a:active {
 }
 
 .contact-section {
-	padding-top: 10%;
+	padding-top: 16%;
 }
+
+.contact-section p {
+	padding-bottom: 20px;
+}
+
+
