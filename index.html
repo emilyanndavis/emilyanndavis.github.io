@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Emily Davis&mdash;Boise, ID Developer</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -20,6 +21,7 @@
             </div>
     	    <div id="menu" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
+                    <li><a class="menu-link back-to-top" href="#splash">back to top</a></li>
                     <li><a class="menu-link" href="#about">about</a></li>
                     <li><a class="menu-link" href="#portfolio">projects</a></li>
                     <li><a class="menu-link" href="#contact">contact</a></li>
@@ -27,7 +29,15 @@
         	</div>
         </div>
     </nav>
-		
+		<section id="splash" class="container-fluid main-section splash-section">
+            <div class="row">
+                <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                    <h1 class="name">Emily Davis</h1>
+                    <h2 class="tagline">Web Developer</h2>
+                    <h2 class="city">Boise, Idaho</h2>
+                </div>
+            </div>
+        </section>
         <section id="about" class="container-fluid main-section about-section">
         	<h1>hi there.</h1>
 	            <div class="row">
@@ -43,7 +53,7 @@
         <section id="portfolio" class="container-fluid main-section portfolio-section">
         	<h1>here are some projects.</h1>
             <h3 class="portfolio-subheading">stay tuned for updates!</h3>
-            <div class="row">
+            <div class="row thumbnails-row">
                 <div class="col xs-12 col-sm-6 col-md-4">
                     <a href="/minerva" target="_blank">
                         <div class="thumbnail">

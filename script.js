@@ -13,19 +13,18 @@ $(document).ready(function() {
 	$('.collapsed').on('click', function() {
 		if ($('h1').hasClass('room-for-menu')) {
 			$('h1').animate(
-				{paddingTop: '40px'}, 500, function() {
+				{paddingTop: '160px'}, 500, function() {
 					$('h1').removeClass('room-for-menu');
 				});
 		}
 		else {		
 			$('h1').animate(
-				{paddingTop: '100px'}, 300, function() {
+				{paddingTop: '160px'}, 300, function() {
 					$('h1').addClass('room-for-menu');
 				});
 		}
 	});
-    
-		
+
 	$('.fa, .fcc-logo').on('mouseenter focusin', function () {
 		$(this).animate({opacity: 0.7}, 50);	
         $(this).closest('div').find('p').slideDown();
@@ -37,3 +36,5 @@ $(document).ready(function() {
 	});
 	
 });
+   
+		
