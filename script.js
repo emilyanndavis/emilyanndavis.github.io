@@ -9,21 +9,24 @@ $(document).ready(function() {
 			window.location.target = target;
 		});
 	});
-	
+/*	
 	$('.collapsed').on('click', function() {
 		if ($('h1').hasClass('room-for-menu')) {
 			$('h1').animate(
-				{paddingTop: '160px'}, 500, function() {
+				{paddingTop: '-=160px'}, 700, function() {
 					$('h1').removeClass('room-for-menu');
-				});
+				}
+			);
 		}
-		else {		
+		else {
 			$('h1').animate(
-				{paddingTop: '160px'}, 300, function() {
+				{paddingTop: '+=160px'}, 300, function() {
 					$('h1').addClass('room-for-menu');
-				});
+				}
+			);
 		}
 	});
+*/
 
 	$('.fa, .fcc-logo').on('mouseenter focusin', function () {
 		$(this).animate({opacity: 0.7}, 50);	
