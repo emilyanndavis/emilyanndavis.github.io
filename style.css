@@ -106,15 +106,7 @@ a:hover, a:visited, a:link, a:active {
 
 .tagline, .city {
 	font-size: 40px;
-<<<<<<< HEAD
 	color: #eee;
-=======
-	color: #98ffab;
-}
-
-.city {
-	color: #eeeeba;
->>>>>>> 8d1397b93c3257821b924a4aa2197879e6c07675
 }
 
 /* About Section */
