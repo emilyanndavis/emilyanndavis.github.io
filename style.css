@@ -137,9 +137,9 @@ a:hover, a:visited, a:link, a:active {
 
 /* Portfolio Section */
 
-.thumbnail:hover {
+/*.thumbnail:hover {
 	opacity: 0.8;
-}
+}*/
 
 .thumbnail .caption {
 	text-align: center;
@@ -151,11 +151,15 @@ a:hover, a:visited, a:link, a:active {
 }
 
 .thumbnail img {
-	max-height: 260px;
+	width: 260px;
 }
 
 .portfolio-section {
 	padding: 12% 5% 20% 5%;
+}
+
+.project-link {
+	color: #aaa;
 }
 
 .portfolio-subheading {
