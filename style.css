@@ -152,6 +152,7 @@ a:hover, a:visited, a:link, a:active {
 
 .thumbnail img {
 	width: 260px;
+	margin-top: 15px;
 }
 
 .portfolio-section {
