@@ -28,15 +28,15 @@ $(document).ready(function() {
 	});
 */
 
-	$('.fa, .fcc-logo').on('mouseenter focusin', function () {
-		$(this).animate({opacity: 0.7}, 50);	
-        $(this).closest('div').find('p').slideDown();
-	});
+	// $('.fa, .fcc-logo').on('mouseenter focusin', function () {
+	// 	$(this).animate({opacity: 0.7}, 50);	
+    //     $(this).closest('div').find('p').slideDown();
+	// });
 	
-	$('.fa, .fcc-logo').on('mouseleave focusout', function () {
-		$(this).animate({opacity: 1}, 50);	
-        $(this).closest('div').find('p').slideUp();
-	});
+	// $('.fa, .fcc-logo').on('mouseleave focusout', function () {
+	// 	$(this).animate({opacity: 1}, 50);	
+    //     $(this).closest('div').find('p').slideUp();
+	// });
 	
 });
    

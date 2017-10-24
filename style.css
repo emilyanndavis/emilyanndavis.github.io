@@ -34,21 +34,30 @@ h1, h2, h3, p {
 h1 {
 	padding-bottom: 20px;	
 	font-size: 48px;
-	color: #ccc;
 }
 
 p {
 	font-size: 18px;
-	color: #ccc;
 }
 
+h1, p, a {
+    color: #eee;
+}
 
+nav a {
+    color: #555 !important;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #111 !important;
+}
 
 
 /* Links */
 
 a:hover, a:visited, a:link, a:active {
-	color: #111;
+	color: #eee;
 	text-decoration: none;
 }
 
@@ -57,7 +66,7 @@ a:hover, a:visited, a:link, a:active {
 }
 
 .dotted-underline:hover {
-	border-bottom: 1px solid #555;
+	border-bottom: 1px solid #999;
 }
 
 
@@ -113,16 +122,28 @@ a:hover, a:visited, a:link, a:active {
 
 .about-text {
 	display: block;
-	color: #aaa;
 }
 
-.about-text a {
-	color: #aaa;
+.social-links {
+    margin-top: 20px;
 }
 
-.about-section h1 {
-	color: #aaa;
+a.social-link,
+a.social-link:hover,
+a.social-link:focus {
+    text-decoration: none;
 }
+
+a.social-link {
+    margin-right: 16px;
+}
+
+a.social-link:hover,
+a.social-link:focus {
+    color: #df1;
+    transition: .1s ease-in-out all;    
+}
+
 
 .about-photo {
 	max-height: 250px;
@@ -132,86 +153,5 @@ a:hover, a:visited, a:link, a:active {
 }
 
 .about-section {
-	padding: 15% 15% 0 15%;
+	padding: 15%;
 }
-
-/* Portfolio Section */
-
-/*.thumbnail:hover {
-	opacity: 0.8;
-}*/
-
-.thumbnail .caption {
-	text-align: center;
-	color: #111;
-}
-
-.thumbnail .caption p {
-	color: #111;
-}
-
-.thumbnail img {
-	width: 260px;
-	margin-top: 15px;
-}
-
-.portfolio-section {
-	padding: 12% 5% 20% 5%;
-}
-
-.project-link {
-	color: #aaa;
-}
-
-.portfolio-subheading {
-	margin-top: -20px;
-	padding-bottom: 20px;
-	color: #ccc;
-}
-
-
-
-/* Contact Section */
-
-.fa, .fcc-block {
-	display: block;
-	text-align: center;
-	opacity: 1;
-	color: #111;
-	text-decoration: none;
-	margin-top: 36px;
-}
-
-.fcc-logo {
-	width: 48px;
-	height: 48px;
-	display: inline-block;
-	margin: 4px auto;
-	border-radius: 20%;
-}
-
-.fa-twitter-square {
-	color: #00aced;
-}
-
-.fa-linkedin-square {
-	color: #007bb6;
-}
-
-.icon-caption {
-	color: #eee;
-	display: none;
-	text-align: center;
-	text-decoration: none;
-	margin-bottom: -20px;
-}
-
-.contact-section {
-	padding: 20% 10% 20% 10%;
-}
-
-.contact-section p {
-	padding-bottom: 20px;
-}
-
-
