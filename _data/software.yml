@@ -1,0 +1,9 @@
+- name: Drafty
+  description: 'Drafty attempts to answer the question: “Just how drafty is it in that drafty room of the house?” Built with Raspberry Pi, Python, and Jekyll.'
+  demo-link: https://emilyanndavis.github.io/drafty/
+  source-link: https://github.com/emilyanndavis/drafty
+
+- name: Minipedia
+  description: Minipedia is a custom interface for searching Wikipedia. Search for anything, or get a random article. Built with Angular.
+  demo-link: https://emilyanndavis.github.io/minipedia/
+  source-link: https://github.com/emilyanndavis/minipedia

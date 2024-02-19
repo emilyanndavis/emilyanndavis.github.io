@@ -1,0 +1,27 @@
+---
+styles_url: "/assets/css/styles.css"
+js_url: "assets/js/tabs.js"
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{ layout.styles_url | relative_url }}">
+</head>
+<body>
+  <header>
+    <h1 class="heading-1 header-content">Emily Davis</h1>
+  </header>
+  <main>
+    <div class="main-content">
+      {{ content }}
+    </div>
+  </main>
+  <footer>
+    <span class="footer-content">&copy; Emily Davis, 2024</span>
+  </footer>
+  <script src="{{ layout.js_url | relative_url }}"></script>
+</body>
+</html>

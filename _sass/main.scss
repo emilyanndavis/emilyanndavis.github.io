@@ -1,0 +1,255 @@
+// Import Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Orbitron:wght@700&display=swap');
+
+// Colors
+$corbomite: #222222;
+$crayola-orchid: #E6A8D7;
+$crayola-sea-green: #93DFB8;
+$crayola-sky-blue: #80DAEB;
+$crayola-yellow: #FCE883;
+
+// Default theme
+$bg-page: $crayola-sky-blue;
+$bg-header-footer: $crayola-orchid;
+$bg-software: $crayola-sea-green;
+$bg-translation: $crayola-yellow;
+$text-primary: $corbomite;
+$text-link: $corbomite;
+$text-link-hover-focus: $corbomite;
+$text-link-visited: $corbomite;
+$border-primary: $corbomite;
+$outline-primary: $corbomite;
+
+// Size & layout variables
+$breakpoint: 768px;
+$content-max-width-desktop: 1200px;
+$header-height: 3.75rem;
+$footer-height: 1.75rem;
+
+// Page & region styles
+body {
+  color: $text-primary;
+  font-family: 'Cabin', sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+header,
+footer {
+  background: $bg-header-footer;
+  box-sizing: border-box;
+}
+
+header {
+  border-bottom: 0.125rem solid $border-primary;
+  padding: 1rem 0;
+}
+
+footer {
+  border-top: 0.125rem solid $border-primary;
+}
+
+main {
+  background: $bg-page;
+  min-height: calc(100vh - #{$header-height} - #{$footer-height});
+}
+
+header .header-content,
+.main-content,
+.footer-content {
+  margin: auto;
+  max-width: $content-max-width-desktop;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  @media (min-width: $breakpoint) {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
+
+.footer-content {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.625rem;
+}
+
+.bg-software {
+  background: $bg-software;
+}
+
+.bg-translation {
+  background: $bg-translation;
+}
+
+// Text styles
+.heading-1,
+.heading-2,
+.heading-3 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  margin: 0;
+}
+
+.heading-1 {
+  font-size: 1.625rem;
+  line-height: 1;
+}
+
+.heading-2 {
+  font-size: 1.375rem;
+  line-height: 1;
+}
+
+.heading-3 {
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+p,
+a {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+p,
+.link--standalone {
+  margin: 0.75rem 0;
+}
+
+a {
+  border-bottom: 0.125rem solid $border-primary;
+  color: $text-link;
+  text-decoration: none;
+  &:focus,
+  &:hover {
+    color: $text-link-hover-focus;
+  }
+  &:visited {
+    color: $text-link-visited;
+  }
+  &:focus {
+    border: none;
+    border-radius: 0.125rem;
+    outline: 0.25rem solid $outline-primary;
+    transition: 75ms ease-in-out all;
+  }
+  &:hover {
+    border-bottom: 0.5rem double $border-primary;
+    transition: 75ms ease-in-out all;
+  }
+  &:focus:hover {
+    border-bottom: solid 0.125rem $border-primary;
+    outline-offset: 0.125rem;
+  }
+}
+
+.link--standalone a:focus {
+  outline-offset: 0.125rem;
+}
+
+// Projects section (tabs & tabpanels)
+.projects {
+  padding-top: 1.25rem;
+  @media (min-width: $breakpoint) {
+    padding-top: 2.25rem;
+  }
+}
+
+.tab,
+.tabpanel {
+  position: relative;
+}
+
+.tab {
+  border: 0.125rem solid $border-primary;
+  border-radius: 0.5rem 0.5rem 0 0;
+  padding: 0.75rem 0.5rem 0.875rem;
+  z-index: 1;
+  &[aria-selected="true"] {
+    z-index: 3;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  &:hover,
+  &:focus {
+    outline: 0.125rem solid $outline-primary;
+    transition: 75ms ease-in-out all;
+    .border-mask {
+      display: none;
+    }
+  }
+  @media (min-width: $breakpoint) {
+    padding: 1rem 0.75rem 1.125rem;
+  }
+}
+
+.border-mask {
+  background: inherit;
+  border: 0.125rem solid $border-primary;
+  border-bottom: none;
+  border-top: none;
+  bottom: -0.25rem;
+  height: 0.25rem;
+  left: -0.125rem;
+  position: absolute;
+  width: 100%;
+}
+
+.card {
+  @media (min-width: $breakpoint) {
+    padding: 0.5rem 0.75rem 0.75rem;
+  }
+}
+
+.tabpanel {
+  border: 0.125rem solid $border-primary;
+  border-radius: 0 0.5rem 0.5rem 0.5rem;
+  box-sizing: border-box;
+  padding: 1rem 0.5rem 1.5rem;
+  z-index: 2;
+  @media (min-width: $breakpoint) {
+    padding: 1.125rem 0.75rem 1.875rem;
+  } 
+}
+
+// About section
+.about,
+.tabpanel:not(.hidden) {
+  display: grid;
+  row-gap: 1rem;
+  @media (min-width: $breakpoint) {
+    column-gap: 3.5rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.about {
+  display: grid;
+  padding: 2rem 0.5rem;
+  row-gap: 2rem;
+  @media (min-width: $breakpoint) {
+    padding: 5rem 0.75rem 2rem;
+    section {
+      padding: 0 0.75rem
+    }
+  }
+  .heading-2 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+// Utilities
+.hidden {
+  display: none;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
