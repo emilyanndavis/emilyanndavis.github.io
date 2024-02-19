@@ -1,142 +1,62 @@
-<!DOCTYPE HTML>
-<!--
-	Solid State by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Emily Davis, Literary Translator</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+---
+layout: default
+title: "Emily Davis, Software & Translation"
+---
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+<section class="projects">
+  <h2 class="visually-hidden" id="projects-heading">Software & Translation Projects</h2>
+  <div role="tablist" aria-labelledby="projects-heading">
+    <button
+      aria-controls="tabpanel-1"
+      aria-selected="true"
+      class="tab bg-software heading-2"
+      id="tab-1"
+      role="tab"
+    >
+      Software
+      <div class="border-mask"></div>
+    </button>
+    <button
+      aria-controls="tabpanel-2"
+      aria-selected="false"
+      class="tab bg-translation heading-2"
+      id="tab-2"
+      role="tab"
+      tabindex="-1"
+    >
+      Translation
+      <div class="border-mask"></div>
+    </button>
+  </div>
+  <div
+    aria-labelledby="tab-1"
+    class="tabpanel bg-software"
+    id="tabpanel-1"
+    role="tabpanel"
+  >
+    {% for project in site.data.software %}
+      {% include software-card.html project=project %}
+    {% endfor %}
+  </div>
+  <div
+    aria-labelledby="tab-2"
+    class="tabpanel bg-translation hidden"
+    id="tabpanel-2"
+    role="tabpanel"
+  >
+    {% for project in site.data.translation %}
+      {% include translation-card.html project=project %}
+    {% endfor %}
+  </div>
+</section>
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1><a href="index.html">Emily Davis</a></h1>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
-
-				<!-- Menu -->
-					<nav id="menu">
-						<div class="inner">
-							<h2>Menu</h2>
-							<ul class="links">
-								<li><a href="index.html">Home</a></li>
-                <li><a href="#tabarovsky">Medical Autobiography</a></li>
-                <li><a href="#unamuno">The Man Who Buried Himself</a></li>
-                <li><a href="#bogota">Bogot&aacute; 39</a></li>
-                <li><a href="#forests">A Thousand Forests in One Acorn</a></li>
-                <li><a href="#footer">About</a></li>
-							</ul>
-							<a href="#" class="close">Close</a>
-						</div>
-					</nav>
-
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<div class="logo"><span class="icon solid fa-pen-nib"></span></div>
-							<h2>Emily Davis</h2>
-							<p>Spanish & Latin American Fiction in Translation</p>
-						</div>
-					</section>
-
-				<!-- Wrapper -->
-					<section id="wrapper">
-
-							<section id="tabarovsky" class="wrapper alt spotlight style2">
-								<div class="inner">
-									<a href="https://www.openletterbooks.org/products/medical-autobiography" class="image">
-                    <img src="images/tabarovsky.png" alt="" />
-                  </a>
-									<div class="content">
-										<h2 class="major">Medical Autobiography</h2>
-										<p>by Dami&aacute;n Tabarovsky. Open Letter Books, 2017</p>
-										<a href="https://www.openletterbooks.org/products/medical-autobiography" class="special">Read more</a>
-									</div>
-								</div>
-              </section>
-              
-							<section id="unamuno" class="wrapper spotlight style1">
-								<div class="inner">
-									<a href="https://www.wordswithoutborders.org/article/the-man-who-buried-himself" class="image"><img src="images/unamuno.png" alt="" /></a>
-									<div class="content">
-										<h2 class="major">"The Man Who Buried Himself"</h2>
-										<p>by Miguel de Unamuno. <em>Words Without Borders</em>, 2011</p>
-										<a href="https://www.wordswithoutborders.org/article/the-man-who-buried-himself" class="special">Read it online at <em>Words Without Borders</em></a>
-									</div>
-								</div>
-							</section>
-
-              <section id="bogota" class="wrapper alt spotlight style4">
-                <div class="inner">
-                  <a href="https://oneworld-publications.com/bogota-39-pb.html" class="image"><img src="images/bogota.jpg" alt="" /></a>
-                  <div class="content">
-                    <h2 class="major">Bogot&aacute; 39: New Voices from Latin America</h2>
-                    <p>Various authors. Oneworld Publications, 2018</p>
-                    <a href="https://oneworld-publications.com/bogota-39-pb.html" class="special">Read more</a>
-                  </div>
-                </div>
-              </section>      
-
-              <section id="forests" class="wrapper spotlight style3">
-                <div class="inner">
-                  <a href="https://www.openletterbooks.org/products/a-thousand-forests-in-one-acorn" class="image"><img src="images/forests.png" alt="" /></a>
-                  <div class="content">
-                    <h2 class="major">A Thousand Forests in One Acorn: An Anthology of Spanish-Language Fiction</h2>
-                    <p>Various authors. Open Letter Books, 2014</p>
-                    <a href="https://www.openletterbooks.org/products/a-thousand-forests-in-one-acorn" class="special">Read more</a>
-                  </div>
-                </div>
-              </section>
-            
-					</section>
-
-				<!-- Footer -->
-					<section id="footer">
-						<div class="inner">
-							<h2 class="major">About me</h2>
-							<p>
-                In 2010, I moved across the country to Rochester, New York&mdash;sight unseen (and, if I'm being honest, 
-                on a bit of a whim)&mdash;to enroll in the Master of Arts in Literary Translation Studies (MALTS) program 
-                at the University of Rochester. The two years that followed&mdash;defined by inspiring faculty, 
-                laughter-filled translation workshops, and a community of weird-like-me word nerds&mdash;surpassed my expectations. 
-              </p>
-              <p>
-                A few years after graduating from the MALTS program, on another whim, I decided to try my hand at modern programming languages. 
-                Turns out, learning JavaScript isn't entirely dissimilar from learning Spanish, or Portuguese, or Quechua. These days, 
-                when I'm not translating fiction or writing code&mdash;which is just another form of translation&mdash;I can often be found 
-                playing board games with friends or hiking in the Boise foothills.
-              </p>
-							<ul class="contact">
-								<li class="icon brands fa-twitter"><a href="https://twitter.com/emilyadavis">twitter.com/emilyadavis</a></li>
-								<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/emilydavis-boise/">linkedin.com/in/emilydavis-boise</a></li>
-								<li class="icon brands fa-github"><a href="https://github.com/emilyanndavis">github.com/emilyanndavis</a></li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; Emily Davis. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</section>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
+<div class="about">
+  <section>
+    <h2 class="heading-2">About me</h2>
+    {% include about-me.html %}
+  </section>
+  <section>
+    <h2 class="heading-2">About this site</h2>
+    {% include about-this-site.html %}
+  </section>
+</div>
