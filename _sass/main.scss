@@ -28,7 +28,6 @@ $footer-height: 1.75rem;
 
 // Page & region styles
 body {
-  color: $text-primary;
   font-family: 'Cabin', sans-serif;
   font-weight: 400;
   margin: 0;
@@ -82,6 +81,13 @@ header .header-content,
 }
 
 // Text styles
+.heading-1,
+.heading-2,
+.heading-3,
+p {
+  color: $text-primary;
+}
+
 .heading-1,
 .heading-2,
 .heading-3 {
