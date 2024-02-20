@@ -28,6 +28,7 @@ $footer-height: 1.75rem;
 
 // Page & region styles
 body {
+  background: $bg-header-footer;
   font-family: 'Cabin', sans-serif;
   font-weight: 400;
   margin: 0;
@@ -63,6 +64,16 @@ header .header-content,
   @media (min-width: $breakpoint) {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
+  }
+}
+
+@supports(padding: max(0px)) {
+  // Ensure rounded screen corners & "notches" don't obscure content
+  header .header-content,
+  .main-content,
+  .footer-content {
+      padding-left: max(0.5rem, env(safe-area-inset-left));
+      padding-right: max(0.5rem, env(safe-area-inset-right));
   }
 }
 
