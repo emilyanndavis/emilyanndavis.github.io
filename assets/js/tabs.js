@@ -1,8 +1,15 @@
+/*
+  Renders the appropriate tabpanel when a tab is activated, and enables standard keyboard interactions.
+  Based on MDN's sample code on the "ARIA: tab role" page: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role#example
+  For more on the tabs pattern and expected keyboard operations, see the ARIA Authoring Practices Guide (APG): https://www.w3.org/WAI/ARIA/apg/patterns/tabs/
+*/
+
 window.addEventListener('DOMContentLoaded', () => {
-  // Add a click event handler to each tab
+  // Add a click/focus event handler to each tab
   const tabs = document.querySelectorAll('[role="tab"]');
   tabs.forEach((tab) => {
     tab.addEventListener('click', changeTabs);
+    tab.addEventListener('focus', changeTabs);
   });
   
   // Enable arrow navigation between tabs in the tab list
