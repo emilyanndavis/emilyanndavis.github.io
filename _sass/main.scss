@@ -2,23 +2,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin&family=Orbitron:wght@700&display=swap');
 
 // Colors
-$corbomite: #222222;
-$crayola-orchid: #E6A8D7;
-$crayola-sea-green: #93DFB8;
-$crayola-sky-blue: #80DAEB;
-$crayola-yellow: #FCE883;
+:root {
+  --corbomite: #222222;
+  --crayola-orchid: #E6A8D7;
+  --crayola-sea-green: #93DFB8;
+  --crayola-sky-blue: #80DAEB;
+  --crayola-yellow: #FCE883;  
+}
 
-// Default theme
-$bg-page: $crayola-sky-blue;
-$bg-header-footer: $crayola-orchid;
-$bg-software: $crayola-sea-green;
-$bg-translation: $crayola-yellow;
-$text-primary: $corbomite;
-$text-link: $corbomite;
-$text-link-hover-focus: $corbomite;
-$text-link-visited: $corbomite;
-$border-primary: $corbomite;
-$outline-primary: $corbomite;
+// Themes
+@mixin default-theme {
+  --bg-page: var(--crayola-sky-blue);
+  --bg-header-footer: var(--crayola-orchid);
+  --bg-software: var(--crayola-sea-green);
+  --bg-translation: var(--crayola-yellow);
+  --text-primary: var(--corbomite);
+  --text-header-footer: var(--corbomite);
+  --text-software: var(--corbomite);
+  --text-translation: var(--corbomite);
+}
+
+@mixin dark-theme {
+  --bg-page: var(--corbomite);
+  --bg-header-footer: var(--corbomite);
+  --bg-software: var(--corbomite);
+  --bg-translation: var(--corbomite);
+  --text-primary: var(--crayola-sky-blue);
+  --text-header-footer: var(--crayola-orchid);
+  --text-software: var(--crayola-sea-green);
+  --text-translation: var(--crayola-yellow);
+}
+
+:root {
+  @include default-theme;
+  @media (prefers-color-scheme: dark) {
+    @include dark-theme;
+  }
+}
 
 // Size & layout variables
 $breakpoint: 768px;
@@ -28,7 +48,8 @@ $footer-height: 1.75rem;
 
 // Page & region styles
 body {
-  background: $bg-header-footer;
+  --border-primary: var(--text-primary);
+  background: var(--bg-header-footer);
   font-family: 'Cabin', sans-serif;
   font-weight: 400;
   margin: 0;
@@ -36,21 +57,22 @@ body {
 
 header,
 footer {
-  background: $bg-header-footer;
+  --border-primary: var(--text-header-footer);
+  background: var(--bg-header-footer);
   box-sizing: border-box;
 }
 
 header {
-  border-bottom: 0.125rem solid $border-primary;
+  border-bottom: 0.125rem solid var(--border-primary);
   padding: 1rem 0;
 }
 
 footer {
-  border-top: 0.125rem solid $border-primary;
+  border-top: 0.125rem solid var(--border-primary);
 }
 
 main {
-  background: $bg-page;
+  background: var(--bg-page);
   min-height: calc(100vh - #{$header-height} - #{$footer-height});
 }
 
@@ -83,20 +105,26 @@ header .header-content,
   line-height: 1.625rem;
 }
 
-.bg-software {
-  background: $bg-software;
+.software {
+  --border-primary: var(--text-software);
+  background: var(--bg-software);
+  color: var(--text-software);
 }
 
-.bg-translation {
-  background: $bg-translation;
+.translation {
+  --border-primary: var(--text-translation);
+  background: var(--bg-translation);
+  color: var(--text-translation);
 }
 
 // Text styles
-.heading-1,
-.heading-2,
-.heading-3,
-p {
-  color: $text-primary;
+body {
+  color: var(--text-primary);
+}
+
+header,
+footer {
+  color: var(--text-header-footer);
 }
 
 .heading-1,
@@ -134,28 +162,27 @@ p,
 }
 
 a {
-  border-bottom: 0.125rem solid $border-primary;
-  color: $text-link;
+  border-bottom: 0.125rem solid var(--border-primary);
+  color: inherit;
   text-decoration: none;
+  &:active,
   &:focus,
-  &:hover {
-    color: $text-link-hover-focus;
-  }
+  &:hover,
   &:visited {
-    color: $text-link-visited;
+    color: inherit;
   }
   &:focus {
     border: none;
     border-radius: 0.125rem;
-    outline: 0.25rem solid $outline-primary;
+    outline: 0.25rem solid var(--border-primary);
     transition: 75ms ease-in-out all;
   }
   &:hover {
-    border-bottom: 0.5rem double $border-primary;
+    border-bottom: 0.5rem double var(--border-primary);
     transition: 75ms ease-in-out all;
   }
   &:focus:hover {
-    border-bottom: solid 0.125rem $border-primary;
+    border-bottom: solid 0.125rem var(--border-primary);
     outline-offset: 0.125rem;
   }
 }
@@ -178,7 +205,7 @@ a {
 }
 
 .tab {
-  border: 0.125rem solid $border-primary;
+  border: 0.125rem solid var(--border-primary);
   border-radius: 0.5rem 0.5rem 0 0;
   padding: 0.75rem 0.5rem 0.875rem;
   z-index: 1;
@@ -190,7 +217,7 @@ a {
   }
   &:hover,
   &:focus {
-    outline: 0.125rem solid $outline-primary;
+    outline: 0.125rem solid var(--border-primary);
     transition: 75ms ease-in-out all;
     .border-mask {
       display: none;
@@ -203,7 +230,7 @@ a {
 
 .border-mask {
   background: inherit;
-  border: 0.125rem solid $border-primary;
+  border: 0.125rem solid var(--border-primary);
   border-bottom: none;
   border-top: none;
   bottom: -0.25rem;
@@ -220,7 +247,7 @@ a {
 }
 
 .tabpanel {
-  border: 0.125rem solid $border-primary;
+  border: 0.125rem solid var(--border-primary);
   border-radius: 0 0.5rem 0.5rem 0.5rem;
   box-sizing: border-box;
   padding: 1rem 0.5rem 1.5rem;
