@@ -11,9 +11,12 @@
   and eventually found my way back to programming.
 </p>
 <p>
-  Thus far, I've mostly focused on the web, but I'm drawn to explore
-  other avenues as well, which is one of the reasons I'm currently
-  working on a second bachelor's degree in Computer Science.
+  For many years, I focused almost exclusively on the web. More recently, I've
+  ventured into the world of scientific computing, where my work has found a
+  renewed sense of purpose. I'm also enjoying dabbling in other fields as I
+  take courses toward a second bachelor's degree in Computer Science. (Visit
+  <a href="https://emilyanndavis.github.io/backpacking/">Backpacking</a>
+  to see my progress!)
 </p>
 <div class="link--standalone">
   <a href="https://www.linkedin.com/in/emilydavis-boise/">
